@@ -13,8 +13,11 @@ services:
       - db_data:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     env_file:
-      - .env
+      - ./.env
 
   redis:
     container_name: redis-container
@@ -25,7 +28,7 @@ services:
     networks:
       - actions-deploy-network
     env_file:
-      - .env
+      - ./.env
 
   app:
     container_name: actions-deploy-container
@@ -43,7 +46,9 @@ services:
     volumes:
       - ./src/main/resources/application-dev.yml:/config/application-dev.yml
     env_file:
-      - .env
+      - ./.env
+    environment:
+      - SPRING_PROFILES_ACTIVE=dev
 
 networks:
   actions-deploy-network:
