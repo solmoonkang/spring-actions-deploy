@@ -44,6 +44,15 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.PROJECT_NAME }}:latest
 
+      - name: Copy JAR file to EC2
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USERNAME }}
+          key: ${{ secrets.EC2_KEY }}
+          source: "build/libs/dart-0.0.1-SNAPSHOT.jar"
+          target: "/home/ec2-user/build/libs/"
+
   deploy:
     runs-on: ubuntu-latest
     needs: build
