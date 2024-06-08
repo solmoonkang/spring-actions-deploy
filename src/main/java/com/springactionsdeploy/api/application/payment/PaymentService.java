@@ -1,5 +1,7 @@
 package com.springactionsdeploy.api.application.payment;
 
+import static com.springactionsdeploy.global.common.PaymentConstant.*;
+
 import java.time.LocalDateTime;
 
 import org.springframework.data.domain.Page;

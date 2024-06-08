@@ -1,5 +1,7 @@
 package com.springactionsdeploy.api.application.gallery;
 
+import static com.springactionsdeploy.global.common.util.GlobalConstant.*;
+
 import java.io.IOException;
 import java.util.List;
 import java.util.Objects;

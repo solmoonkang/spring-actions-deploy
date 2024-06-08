@@ -1,5 +1,7 @@
 package com.springactionsdeploy.api.infrastructure.websocket;
 
+import static com.springactionsdeploy.global.common.util.AuthConstant.*;
+
 import java.util.Map;
 
 import org.springframework.http.HttpStatus;
