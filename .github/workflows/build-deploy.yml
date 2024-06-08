@@ -27,6 +27,9 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew build -x test
 
+      - name: Verify JAR file
+        run: ls -l build/libs
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
 
