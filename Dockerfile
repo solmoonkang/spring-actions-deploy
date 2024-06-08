@@ -2,13 +2,13 @@
 FROM amazoncorretto:17
 
 # 빌드 인수
-ARG JAR_FILE=build/libs/dart-0.0.1-SNAPSHOT.jar
+ARG JAR_FILE=build/libs/spring-actions-deploy-0.0.1.jar
 
 # 애플리케이션 JAR 파일 복사
-COPY ${JAR_FILE} /dart.jar
+COPY ${JAR_FILE} /spring-actions-deploy.jar
 
 # 애플리케이션 설정 파일 복사
 COPY src/main/resources/application-dev.yml /config/application-dev.yml
 
 # ENTRYPOINT 설정
-ENTRYPOINT ["java", "-Dspring.config.location=file:/config/application-dev.yml", "-Dspring.profiles.active=dev", "-jar", "/dart.jar"]
+ENTRYPOINT ["java", "-Dspring.config.location=file:/config/application-dev.yml", "-Dspring.profiles.active=dev", "-jar", "/spring-actions-deploy.jar"]
