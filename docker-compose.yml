@@ -32,7 +32,6 @@ services:
 
   app:
     container_name: actions-deploy-container
-    image: ssolmoon/spring-actions-deploy:latest
     build:
       context: .
       dockerfile: ./Dockerfile
