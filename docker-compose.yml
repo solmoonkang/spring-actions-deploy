@@ -32,9 +32,7 @@ services:
 
   app:
     container_name: actions-deploy-container
-    build:
-      context: .
-      dockerfile: ./Dockerfile
+    image: ssolmoon/spring-actions-deploy:latest
     restart: always
     ports:
       - "8080:8080"
