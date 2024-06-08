@@ -11,4 +11,4 @@ COPY ${JAR_FILE} /dart.jar
 COPY src/main/resources/application-dev.yml /config/application-dev.yml
 
 # ENTRYPOINT 설정
-ENTRYPOINT ["java", "-Dspring.config.location=file:/config/application-dev.yml", "-jar", "/dart.jar"]
+ENTRYPOINT ["java", "-Dspring.config.location=file:/config/application-dev.yml", "-Dspring.profiles.active=dev", "-jar", "/dart.jar"]
