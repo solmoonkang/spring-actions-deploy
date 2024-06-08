@@ -68,13 +68,14 @@ dependencies {
     // Test
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.security:spring-security-test'
-    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
 tasks.named('test') {
     useJUnitPlatform()
 }
 
-tasks.named('jar') {
-    enabled = false
+jar {
+    archiveBaseName.set('spring-actions-deploy')
+    archiveVersion.set('0.0.1')
+    archiveClassifier.set('')
 }
