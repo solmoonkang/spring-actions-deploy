@@ -58,8 +58,8 @@ jobs:
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_KEY }}
           source: |
-            docker-compose.yml
-            Dockerfile
+            ./docker-compose.yml
+            ./Dockerfile
           target: "/home/ec2-user/"
 
       - name: SSH into EC2 and create .env
