@@ -61,6 +61,7 @@ jobs:
             ./docker-compose.yml
             ./Dockerfile
           target: "/home/ec2-user/"
+          debug: true
 
       - name: SSH into EC2 and create .env
         uses: appleboy/ssh-action@master
