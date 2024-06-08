@@ -1,0 +1,6 @@
+spring:
+  profiles:
+    active: local, secret
+
+server:
+  port: 8080
