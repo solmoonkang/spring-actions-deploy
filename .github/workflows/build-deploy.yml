@@ -60,7 +60,7 @@ jobs:
           source: |
             ./docker-compose.yml
             ./Dockerfile
-          target: "/home/ec2-user/"
+          target: "/home/ec2-user"
           debug: true
 
       - name: SSH into EC2 and create .env
