@@ -31,7 +31,7 @@ services:
     container_name: actions-deploy-container
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: ./Dockerfile
     restart: always
     ports:
       - "8080:8080"
